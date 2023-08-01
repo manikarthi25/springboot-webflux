@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "36e634ef-e2bc-4d10-addd-db6413f03431",
+		"name": "springboot-webflux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"mani\",\r\n    \"qty\":10,\r\n    \"price\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"manikandan\",\r\n    \"qty\":10,\r\n    \"price\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/product/update/64c92d299e7a4f1e336e74e6",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"product",
+						"update",
+						"64c92d299e7a4f1e336e74e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"manikandan\",\r\n    \"qty\":10,\r\n    \"price\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/product/delete/64c92d299e7a4f1e336e74e6",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"product",
+						"delete",
+						"64c92d299e7a4f1e336e74e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/product/64c92d299e7a4f1e336e74e6",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"product",
+						"64c92d299e7a4f1e336e74e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Price Range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8181/product/product-range?min=10&max=30",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"product",
+						"product-range"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "10"
+						},
+						{
+							"key": "max",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
